@@ -21,6 +21,11 @@ Introduction: In 1987, Brooks [1] publish an essay ‘No Silver Bullet: Essence 
 Brooks pointed out that the inherent properties of software development are complexity, conformity, changeability and invisibility. These features are difficult to address with a single technological breakthrough. Therefore, it is inevitable for engineers to solve these problems when developing software. Among all design patterns, builder pattern and adapter pattern can be used to overcome these inherent properties. The **builder pattern** can be used to solve the complexity and changeability of software development. The **adapter pattern** can be used to solve conformity and invisibility in software development.
 
 
+**Case Study Analysis:**
+
+
+Game development is a comprehensive software project. The large size of the game makes it difficult to complete in a short time, and diverse game performance requires close teamwork by people who are good at different fields. Complex game logic brings great challenges to the optimization and testing of the code. The need for update makes the logic code must be brief and readable. At the same time, it should have a large space for expansion. These challenges create a strong need for good and clean code in game development. The knowledge of software engineering, especially design patterns, can greatly optimize code. Therefore, we will use design patterns to optimize a top-down TPS mini-game made by our team, and analyze the benefits of these optimizations to the game.
+
 
 
 **Reference**
