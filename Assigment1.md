@@ -26,7 +26,44 @@ Brooks pointed out that the inherent properties of software development are comp
 
 Game development is a comprehensive software project. The large size of the game makes it difficult to complete in a short time, and diverse game performance requires close teamwork by people who are good at different fields. Complex game logic brings great challenges to the optimization and testing of the code. The need for update makes the logic code must be brief and readable. At the same time, it should have a large space for expansion. These challenges create a strong need for good and clean code in game development. The knowledge of software engineering, especially design patterns, can greatly optimize code. Therefore, we will use design patterns to optimize a top-down TPS mini-game made by our team, and analyze the benefits of these optimizations to the game.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{2.png} 
+    \caption{Implementation of Generic TankBuilder.}
+    \label{fig:2} 
+\end{figure}
 
+This optimization solves the following software development challenges.
+\begin{itemize}
+    \item \textbf{Complexity}: Breaking character building down into discrete steps (such as setting health and abilities) gives us the flexibility to manage the data of character generation and to build different characters in a distributed way as the player faces different game scenarios. This pattern reduces coupling between modules, which is consistent with Brooks' emphasis on managing complexity through structured decomposition.
+    \item \textbf{Changeability:} The extension system can support new role attributes. When a role needs new attributes to enrich its functionality, it can simply write corresponding methods in its subclasses without modifying other classes. At the same time, the system also simplifies the construction of new role types by subclassing TankBuilder<T>, which conforms to the open-closed principle. This avoids modifying existing code, thereby minimizing the risk of regression.
+\end{itemize}
+
+\subsection{Case II: Adapter Pattern in Audio System Integration}
+Subsequent games need to be compatible with multiple audio backends, including Unity's native audio engine and FMOD, each with different playback and volume control APIs. Direct integration prevents flexibility by tying the core logic tightly to a specific implementation. To solve this problem, we designed the framework as shown in Fig. \ref{fig:3}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{3.png} 
+    \caption{Adapter pattern implementation in Audio System Integration}
+    \label{fig:3} 
+\end{figure}
+
+We define the IAudioSystem interface and use two adapter classes (UnityAudioAdapter and FMODAudioAdapter) to implement this interface, converting generic calls to back-end specific operations.
+In this way, we only need to modify the adapter class reference, we can switch different audio backends as output, thus achieving a more concise setting switching audio function. For example, you can map PlaySound methods to Unity's AudioSource component by changing the reference to audioSystem to UnityAudioAdapter and the name to FMODAudioAdapter to interface with FMOD's event system. This allows the client code to interact only with the abstract interface, as shown in Fig. \ref{fig:4}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{4.png} 
+    \caption{The abstract interface of IAudio System.}
+    \label{fig:4} 
+\end{figure}
+
+This optimization solves the following software development challenges.
+\begin{itemize}
+    \item \textbf{Conformity}: The adapter ensures consistent interaction with different audio systems, abstracting the implementation details from the client code. Therefore, the rest of the team (members of the art team often do not have a strong code base) need not focus on the implementation of the system, and concentrate on using the same method to call the audio playback.
+    \item \textbf{Changeability:} Introducing a new audio backend (such as Wwise) requires only a new adapter to be implemented and the dependency reversal principle is followed, which allows the system to quickly adapt to new and better technologies and plugins, helping game development control costs.
+\end{itemize}
 
 **Reference**
 
