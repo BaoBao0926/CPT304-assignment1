@@ -27,6 +27,7 @@ Brooks pointed out that the inherent properties of software development are comp
 Game development is a comprehensive software project. The large size of the game makes it difficult to complete in a short time, and diverse game performance requires close teamwork by people who are good at different fields. Complex game logic brings great challenges to the optimization and testing of the code. The need for update makes the logic code must be brief and readable. At the same time, it should have a large space for expansion. These challenges create a strong need for good and clean code in game development. The knowledge of software engineering, especially design patterns, can greatly optimize code. Therefore, we will use design patterns to optimize a top-down TPS mini-game made by our team, and analyze the benefits of these optimizations to the game.
 
 ![Example1](https://github.com/user-attachments/assets/976ee558-bdfb-46cd-8b7f-789f36b70e97)
+
 Figure 1: Implementation of Generic TankBuilder.
 
 This optimization solves the following software development challenges:
@@ -39,11 +40,13 @@ Changeability: The extension system can support new role attributes. When a role
 Subsequent games need to be compatible with multiple audio backends, including Unity's native audio engine and FMOD, each with different playback and volume control APIs. Direct integration prevents flexibility by tying the core logic tightly to a specific implementation. To solve this problem, we designed the framework as shown in Figure 2.
 
 ![URL2](https://github.com/user-attachments/assets/e80abb1b-7c9f-498c-aa66-22d44ed7b726)
+
 Figure 2: Adapter pattern implementation in Audio System Integration
 
 We define the IAudioSystem interface and use two adapter classes (UnityAudioAdapter and FMODAudioAdapter) to implement this interface, converting generic calls to back-end specific operations. In this way, we only need to modify the adapter class reference, we can switch different audio backends as output, thus achieving a more concise setting switching audio function. For example, you can map PlaySound methods to Unity's AudioSource component by changing the reference to audioSystem to UnityAudioAdapter and the name to FMODAudioAdapter to interface with FMOD's event system. This allows the client code to interact only with the abstract interface, as shown in Figure 3.
 
 ![Example2](https://github.com/user-attachments/assets/337c2b0e-7239-45cd-8fdc-7964ef1a46f6)
+
 Figure 3: The abstract interface of IAudio System.
 
 **Reference**
