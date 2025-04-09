@@ -42,13 +42,6 @@ Game development is a comprehensive software project. The large size of the game
 ***Case I: Builder Pattern in Tank Construction：***
 The game has a variety of characters. The different characters have different attributes, such as health, speed and AI logic (such as whether they are player characters, attack willingness, preferred attack mode, patrol strategy). As the level progresses and special items are used, the character's attributes will change slightly. Therefore, building player and enemy characters requires configuration of different attributes. Traditional methods rely on overloading constructors, resulting in code redundancy. The need to assign all the properties of the built character at the same time increases the difficulty of managing game data. To solve this problem, we designed the following structure as shown in Fig.[1]
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\textwidth]{1.png} 
-    \caption{Builder pattern implementation in Unity: Differentiation between player and enemy tanks }
-    \label{fig:1} 
-\end{figure}
-
 We have implemented a generic TankBuilder<T> class for method chains and decoupling of object construction and representation. The TankBuilder<T> class encapsulates core attributes (such as prefabrication, spawn location, and health) and allows derived classes like PlayerTankBuilder and EnemyTankBuilder to extend functionality. For example, PlayerTankBuilder introduces a way to enable melee attacks, while EnemyTankBuilder supports reinforcement and patrol behavior. An example is shown in Fig.[2]
 
 
