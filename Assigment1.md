@@ -30,7 +30,7 @@ Game development is a comprehensive software project. The large size of the game
   <img src="https://github.com/user-attachments/assets/976ee558-bdfb-46cd-8b7f-789f36b70e97" alt="Example1">
 </div>
 
-Figure 1: Implementation of Generic TankBuilder.
+<center>Figure 1: Implementation of Generic TankBuilder.</center>
 
 This optimization solves the following software development challenges:
 
@@ -46,7 +46,7 @@ Subsequent games need to be compatible with multiple audio backends, including U
   <img src="https://github.com/user-attachments/assets/e80abb1b-7c9f-498c-aa66-22d44ed7b726" alt="URL2">
 </div>
 
-Figure 2: Adapter pattern implementation in Audio System Integration
+<center>Figure 2: Adapter pattern implementation in Audio System Integration</center>
 
 We define the IAudioSystem interface and use two adapter classes (UnityAudioAdapter and FMODAudioAdapter) to implement this interface, converting generic calls to back-end specific operations. In this way, we only need to modify the adapter class reference, we can switch different audio backends as output, thus achieving a more concise setting switching audio function. For example, you can map PlaySound methods to Unity's AudioSource component by changing the reference to audioSystem to UnityAudioAdapter and the name to FMODAudioAdapter to interface with FMOD's event system. This allows the client code to interact only with the abstract interface, as shown in Figure 3.
 
@@ -54,7 +54,19 @@ We define the IAudioSystem interface and use two adapter classes (UnityAudioAdap
   <img src="https://github.com/user-attachments/assets/337c2b0e-7239-45cd-8fdc-7964ef1a46f6" alt="Example2">
 </div>
 
-Figure 3: The abstract interface of IAudio System.
+<center>Figure 3: The abstract interface of IAudio System.</center>
+
+***Case Summary***
+Optimizing existing game code using Builder and Adapter patterns enabled us to mitigate some of the inherent challenges of software engineering. We use Builder pattern to optimize the construction of characters so that the production team can generate characters more freely and provide a flexible solution for creating new characters. Extending existing character attributes solves the problem that modifying a character in the past required modifying all code related to the generation of that character, greatly improving the efficiency of game development and testing. We also used Adapter pattern to optimize the audio system of the game so that the game can be quickly compatible with different audio backends in a simple and consistent way, improving the docking efficiency between different members of the project so that members who are skilled in different areas can focus on their own work. At the same time, the code also uses methods such as singleton mode to manage the core control script to resolve the administrative conflicts that may arise in situations such as scene loading that may generate duplicate controllers.
+
+Both patterns embody the core principles of object orientation.
+
+-Single responsibility: the character generator focuses on object construction, while the adapter isolates audio background interactions.
+-Open-closed principle: Extensions (such as new character types or audio engines) require minimal changes to existing code.
+-Dependency inversion: high-level modules (such as game logic) rely on abstractions (IAudioSystem) rather than concrete implementations
+-Interface isolation: Clients interact with minimal, role-specific interfaces to avoid unnecessary dependencies.
+
+Thus, our optimization by breaking down complexity, encapsulating changeability, and adhering to design principles aligns with Brooks' thesis that progress lies in methodical incremental innovation rather than elusive "silver bullets." Future work could explore hybrid models or quantify productivity gains from larger scale projects.
 
 **Reference**
 
