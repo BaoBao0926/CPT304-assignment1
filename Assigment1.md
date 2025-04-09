@@ -25,10 +25,10 @@ Brooks pointed out that the inherent properties of software development are comp
 For the **Builder pattern**, it is a creational design pattern. When engineers need to create many approximate projects, they often choose to use builder pattern to avoid creating too many constructors. Using the builder pattern will separate out the code from the constructor and add it to a class named builder [6]. Using the methods in the builder class, the engineers can create complex and diverse objects and representations. Therefore, the builder pattern allows you to build up a complex object step by step. It also allows the user to use a builder class to create multiple different types of objects and representations. So builder pattern has four main advantages:
 
 
-## In the process of object creation, we can use the methods in the builder class to create an object according to the user's needs.
-## Following the Single Responsibility Principle, the complex construction code is separated from the constructor [4].
-## You can use the same constructor when creating different objects, improving code reusability.
-## New methods can be added to the builder class to meet the new needs of users, without modifying the constructor and affecting other objects.
+* In the process of object creation, we can use the methods in the builder class to create an object according to the user's needs.
+* Following the Single Responsibility Principle, the complex construction code is separated from the constructor [4].
+* You can use the same constructor when creating different objects, improving code reusability.
+* New methods can be added to the builder class to meet the new needs of users, without modifying the constructor and affecting other objects.
 
 
 
