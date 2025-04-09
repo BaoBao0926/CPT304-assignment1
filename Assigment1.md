@@ -21,6 +21,18 @@ Relevance: The insights proposed in this paper remain a fundamental role in mode
 Brooks pointed out that the inherent properties of software development are complexity, conformity, changeability and invisibility. These features are difficult to address with a single technological breakthrough. Therefore, it is inevitable for engineers to solve these problems when developing software. Among all design patterns, builder pattern and adapter pattern can be used to overcome these inherent properties. The **builder pattern** can be used to solve the complexity and changeability of software development. The **adapter pattern** can be used to solve conformity and invisibility in software development.
 
 
+
+For the **Builder pattern**, it is a creational design pattern. When engineers need to create many approximate projects, they often choose to use builder pattern to avoid creating too many constructors. Using the builder pattern will separate out the code from the constructor and add it to a class named builder [6]. Using the methods in the builder class, the engineers can create complex and diverse objects and representations. Therefore, the builder pattern allows you to build up a complex object step by step. It also allows the user to use a builder class to create multiple different types of objects and representations. So builder pattern has four main advantages:
+
+
+    * In the process of object creation, we can use the methods in the builder class to create an object according to the user's needs.
+    * Following the Single Responsibility Principle, the complex construction code is separated from the constructor \cite{2}.
+    * You can use the same constructor when creating different objects, improving code reusability.
+    * New methods can be added to the builder class to meet the new needs of users, without modifying the constructor and affecting other objects.
+
+
+
+
 **Case Study Analysis:**
 
 
@@ -71,4 +83,6 @@ Thus, our optimization by breaking down complexity, encapsulating changeability,
 **Reference**
 
 [1] F. P. Brooks Jr., "No Silver Bullet: Essence and Accidents of Software Engineering," IEEE Computer, vol. 20, no. 4, pp. 10-19, Apr. 1987.
+
+[6] Refactoring.Guru.Refactoringguru,n.d.Accessed:2025-04-07.
 
