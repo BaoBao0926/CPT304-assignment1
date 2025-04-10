@@ -1,11 +1,11 @@
 
-**Introduction:**
+# Introduction:
 
 Introduction: In 1987, Brooks [1] publish an essay ‘No Silver Bullet: Essence and Accidents of Software Engineering’, which proposes an influential perspective that there is not a single technological and management breakthrough can dramatically improve the software development. Brooks pinpoints two difficulties, namely essence and accidents. The essence difficult, such as complexity, conformity, changeability and invisibility, can not be eliminated by any approaches, while the accident difficult, such as inefficient programming languages, can be mitigated to some extent. In addition, he discussed the influence of past breakthroughs, such as high-level language and time-sharing techniques, and promising future tools, such as artificial intelligence and object-oriented languages. He believed these advancements are only capable of incrementally improving software engineer, instead of revolutionarily.
 
 Relevance: The insights proposed in this paper remain a fundamental role in modern software engineering, which help later software engineers distinct the differences between essential and accidental difficulties and cultivate the motivation to design efficient tools and frameworks to work more efficiently. In this paper, one section that discuss the role of great designer highlights the significance of skilled designers and engineers in designing the robust and systematic software systems. Overall, this paper comprehensively discussed essential and accidental difficulties, past breakthroughs, future promising tools and the role of designer, which reject a simple way of “silver bullet” but encourages a disciplined and incremental progress. The idea of Brooks continually guides the development of the software engineering.
 
-**Identified Key Challenges:**
+# Identified Key Challenges:
 
 
 
@@ -15,7 +15,7 @@ Relevance: The insights proposed in this paper remain a fundamental role in mode
 
 
 
-**Two Selected Design Pattern and Application:**
+# Two Selected Design Pattern and Application:
 
 
 Brooks pointed out that the inherent properties of software development are complexity, conformity, changeability and invisibility. These features are difficult to address with a single technological breakthrough. Therefore, it is inevitable for engineers to solve these problems when developing software. Among all design patterns, builder pattern and adapter pattern can be used to overcome these inherent properties. The **builder pattern** can be used to solve the complexity and changeability of software development. The **adapter pattern** can be used to solve conformity and invisibility in software development.
@@ -42,7 +42,7 @@ As for the **adapter pattern**, it is a structural design pattern. In software d
 
 Xiaoxi Chen's research shows the application of adapter design pattern in container ship stowage system [3]. In the container ship stowage system, an adapter named IMin is created and used to connect the system's main program, a class named MyControl, with other entity classes. By using adapter pattern, the system successfully improves the visibility and reusability of the code, enhances the maintainability of the system, and ensures the consistency of the system interfaces.
 
-**Case Study Analysis:**
+# Case Study Analysis:
 
 
 Game development is a comprehensive software project. The large size of the game makes it difficult to complete in a short time, and diverse game performance requires close teamwork by people who are good at different fields. Complex game logic brings great challenges to the optimization and testing of the code. The need for update makes the logic code must be brief and readable. At the same time, it should have a large space for expansion. These challenges create a strong need for good and clean code in game development. The knowledge of software engineering, especially design patterns, can greatly optimize code. Therefore, we will use design patterns to optimize a top-down TPS mini-game made by our team, and analyze the benefits of these optimizations to the game.
@@ -96,14 +96,14 @@ Both patterns embody the core principles of object orientation.
 
 Thus, our optimization by breaking down complexity, encapsulating changeability, and adhering to design principles aligns with Brooks' thesis that progress lies in methodical incremental innovation rather than elusive "silver bullets." Future work could explore hybrid models or quantify productivity gains from larger scale projects.
 
-# Conclusion
+# Conclusion:
 
 In conclusion, we analyze the paper "No Silver Bullet" and its four essential challenges, exactly complexity, conformity, changeability and invisibility. We realize that software system development is difficult and abstract, facing numerous difficulties, and there is no "silver bullet" can revolutionarily address issue. Instead, we only can incrementally develop a more reasonable way to advance the improvement of software engineer. This study demonstrates that the Builder and Adapter patterns provide pragmatic responses to software engineering's inherent challenges. By decomposing complexity, encapsulating variability, and adhering to design principles, these patterns align with Brooks' thesis that progress lies in disciplined, incremental innovation rather than elusive "silver bullets." In addition, we analyze two patterns, exactly builder pattern and adapter patter with corresponding case study. We explain the influence of two design pattern in their application.
 
-# Bibliography
+# Bibliography:
 ecai
 
-# Appendix
+# Appendix:
 
 **Case Study 1**
 
