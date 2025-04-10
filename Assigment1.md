@@ -30,7 +30,7 @@ For the **Builder pattern**, it is a creational design pattern. When engineers n
 * You can use the same constructor when creating different objects, improving code reusability.
 * New methods can be added to the builder class to meet the new needs of users, without modifying the constructor and affecting other objects.
 
-
+An **example of the builder pattern** is given in the study of Dhait [4]. In a house customization software, a House object is created to record the user's requirements for a house. Instead of writing a specific constructor for each user, the software created a class called House Builder to create objects. The House Builder has a number of methods that allow you to add different numbers of Windows and different kinds of furniture to an object. By using builder pattern, the house customization software can create complex objects and can meet the different needs of different users
 
 
 **Case Study Analysis:**
