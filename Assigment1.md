@@ -33,6 +33,15 @@ For the **Builder pattern**, it is a creational design pattern. When engineers n
 An **example of the builder pattern** is given in the study of Dhait [4]. In a house customization software, a House object is created to record the user's requirements for a house. Instead of writing a specific constructor for each user, the software created a class called House Builder to create objects. The House Builder has a number of methods that allow you to add different numbers of Windows and different kinds of furniture to an object. By using builder pattern, the house customization software can create complex objects and can meet the different needs of different users
 
 
+As for the **adapter pattern**, it is a structural design pattern. In software development, there are often interface mismatches, such as when you want to use an existing class or subclass, the interface of the class is not match the one you need [5]. At this point, directly modifying the interface to fit our needs could break some of the code that has already been done and cause some errors. To solve this problem, we can use the adapter pattern and create an adapter class to convert the interface type to meet our requirements. Existing classes can safely use their own interfaces to call methods on the adapter class and send data, the adapter class will then send the data to our software in the format we want [5]. The adapter pattern has four main advantages:
+
+* The single responsibility principle. Separating the interface and data transformation code from the main program code [6].
+* The open/closed principle. New adapters can be introduced into the program without breaking existing code [6].
+* Improve visibility by decoupling the client from the implementation of the system.
+* Improving the maintainability and expansibility of the software [1].
+
+Xiaoxi Chen's research shows the application of adapter design pattern in container ship stowage system [3]. In the container ship stowage system, an adapter named IMin is created and used to connect the system's main program, a class named MyControl, with other entity classes. By using adapter pattern, the system successfully improves the visibility and reusability of the code, enhances the maintainability of the system, and ensures the consistency of the system interfaces.
+
 **Case Study Analysis:**
 
 
@@ -91,7 +100,11 @@ Thus, our optimization by breaking down complexity, encapsulating changeability,
 
 [1] F. P. Brooks Jr., "No Silver Bullet: Essence and Accidents of Software Engineering," IEEE Computer, vol. 20, no. 4, pp. 10-19, Apr. 1987.
 
+[3] Xiaoxi Chen, Jia Chen, Shengwen Zhang, and Lili Sui, ‘Application of adapter pattern in container ship stowage system’, in 2010 2nd International Conference on Industrial and Information Systems, volume1, pp.120–123.IEEE,(2010).
+
 [4] Saurav Dhait, Atharva Sapate, Atharva Gadge, Pradnya Borkar, Sagarkumar Badhiye, and Ujjwala Bal Aher, ‘Analysis of the best creational design patterns in software development’ in 2024 8th International Conference on Computing, Communication, Control and Automation (ICCUBEA), pp.1–5. IEEE, (2024).
+
+[5]  Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides, Design patterns: elements of reusable object-oriented software, Pearson Deutschland GmbH,1995.
 
 [6] Refactoring.Guru.Refactoringguru,n.d.Accessed:2025-04-07.
 
