@@ -7,6 +7,9 @@ Relevance: The insights proposed in this paper remain a fundamental role in mode
 
 # Identified Key Challenges:
 
+**Complexity:** Complexity can be regarded as the most severe and fundamental challenge in software engineering. Software system cannot be standardized because each software system is consisted of some unique and special components, and components interact in a very different way. Therefore, software systems cannot be simplified like some mathematics and the physical formula deduction. In addition, with the system requirement growing, the complexity grows exponentially, leading to extreme complexity for software engineers. Engineers must remember the overwhelming number of states and potential interactions, which is a key challenge making some project failing.
+
+**Conformity:** Conformity refers to that all software systems must follow the legacy system, competing standards, organizational politics and user habits. However, these requirements are changing forever with the society growing. Therefore, software systems must change correspondingly for conformity, causing “arbitrary complexity” imposed by the external constraints. However, compared with some physical buildings, software systems are regarded as most conformable and easiest to get changed and most recent arrival, so that software systems must accept the challenges brought by conformity.
 
 
 **Changeability:** Changeability is caused because 1) software engineering is a continuously evolving subject due to changing requirement, technologies and environments; 2) the physical machines on which the software systems are based may change, leading to the new requirement to change the implementation of software system. In addition to the challenge of changing itself, additional maintenance also poses a key challenge.
